@@ -124,6 +124,9 @@ class BinarySearchTree {
         while(queue.length) {
             node = queue.shift();
             data.push(node.value);
+            //in a binary tree, there is only left and right
+            //in a non binary tree, if a node has many siblings, you would have
+            //to visit them all and add them to the queue
             if(node.left) queue.push(node.left);
             if(node.right) queue.push(node.right);
         }
