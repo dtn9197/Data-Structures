@@ -23,14 +23,20 @@ class MaxBinaryHeap {
     }
 
     remove() {
-        const max = this.heapArray[0];
-        const end = this.heapArray.pop();
+        //remove the root
+        const root = this.heapArray[0];
+
+        //get last node
+        const lastNode = this.heapArray.pop();
+
         if(this.heapArray.length > 0) {
-            this.heapArray[0] = end;
+            //place last node in the root's place
+            this.heapArray[0] = lastNode;
+            
             //bubble down
             this.sinkDown();
         }
-        return max;
+        return root;
     }
 
     sinkDown() {
