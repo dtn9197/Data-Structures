@@ -10,7 +10,7 @@ function findFactorial(number) {
 
 
 //recursion
-///changed
+
 function findFactorial2(number) {
     if(number == 1)
         return 1;
