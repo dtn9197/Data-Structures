@@ -21,8 +21,6 @@ function reverseString(string) {
 
 }
 
-// reverseString("Hi My name is Andrei");
-reverse2("Hi My name is Andrei");
 
 
 function reverse(str) {
@@ -47,3 +45,25 @@ function reverse2(str) {
 }
 
 const reverse3 = str => str.split("").reverse().join("");
+
+
+/**String reversal using moving pointer pattern */
+function reverse4(str) {
+    if(!str || str.length < 2 || typeof str !== "string")
+        return "not string";
+
+    let strArray = str.split("");
+    let left = 0;
+    let right = str.length - 1;
+    while(left < right) {
+        console.log("h");
+        let temp = strArray[left];
+        strArray[left] = strArray[right];
+        strArray[right] = temp;
+        left++;
+        right--;
+    }
+    return strArray.join("");
+}
+
+console.log(reverse4("Hello World"));
