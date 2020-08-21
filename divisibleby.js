@@ -3,7 +3,7 @@
 //loops through every number
 //if number % 5 and %3
 //print number
-//else
+//else////
 
 function divisibleBy(lowerBound, upperBound) {
     for (var i = lowerBound; i <= upperBound; i++) {
