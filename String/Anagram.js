@@ -48,10 +48,6 @@
       return false;
     }
 
-
-
-
-
   
     const lookup = {};
   
@@ -80,4 +76,6 @@
   
   console.log(validAnagram("aabbc", "bbaaac"));
  
+  
+
   
