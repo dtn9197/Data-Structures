@@ -11,7 +11,7 @@
   *         push it to results array
   * return array
   */
-  function removeDuplicates2(array) {
+  function removeDuplicates(array) {
       var hash = {};
       var results = [];
       for(var i = 0; i < array.length; i++) {
@@ -24,22 +24,26 @@
       return results;
       
   }
- function removeDuplicates(array) {
-     for(var i = 0; i < array.length; i++) {
-         var outerValue = array[i];
-         for(var j = 0; j < array.length; j++) {
-             if(j == i)
-                continue;
-            if(array[j] == outerValue)
-                array.splice(j,1);
-         }
-     }
-     return array;
-
- }
- var array = [3,5,1,5,2,8,3,2];
- var array2 = [1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,5,5,6,7,8,8,8,9]
-
-console.log(removeDuplicates2(array));
-
  
+
+/**the index in the while loop only moves up if no array is removed */
+function removeDuplicates2(array) {
+    for(var i = 0; i < array.length; i++) {
+        var outerValue = array[i];
+        var innerIndex = 0;
+        while(innerIndex < array.length) {
+            if(innerIndex === i) {
+                innerIndex++;
+                continue;
+            }
+            if(array[innerIndex] === array[i])
+                array.splice(innerIndex, 1)
+            else 
+                innerIndex++;
+            
+        }
+    }
+    return array;
+
+}
+
