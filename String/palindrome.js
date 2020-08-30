@@ -52,8 +52,8 @@ function IsPalindrome(str) {
     return true;
   }
   console.log(IsPalindrome("Hananah"));
-  console.log(IsPalindrome2("Hannah"));
+  console.log(IsPalindrome2("Hananah"));
 
   
   
-  
+ 
