@@ -26,24 +26,5 @@
   }
  
 
-/**the index in the while loop only moves up if no array is removed */
-function removeDuplicates2(array) {
-    for(var i = 0; i < array.length; i++) {
-        var outerValue = array[i];
-        var innerIndex = 0;
-        while(innerIndex < array.length) {
-            if(innerIndex === i) {
-                innerIndex++;
-                continue;
-            }
-            if(array[innerIndex] === array[i])
-                array.splice(innerIndex, 1)
-            else 
-                innerIndex++;
-            
-        }
-    }
-    return array;
 
-}
 
